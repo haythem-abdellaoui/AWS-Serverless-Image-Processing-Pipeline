@@ -1,0 +1,6 @@
+terraform/envs/dev/.terraform
+terraform/envs/dev/.terraform.lock.hcl 
+terraform/envs/dev/*.tfstate
+terraform/envs/dev/*.tfstate.*
+terraform/envs/dev/*.tfvars
+test*
