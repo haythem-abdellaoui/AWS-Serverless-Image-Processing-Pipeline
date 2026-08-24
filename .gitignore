@@ -4,3 +4,4 @@ terraform/envs/dev/*.tfstate
 terraform/envs/dev/*.tfstate.*
 terraform/envs/dev/*.tfvars
 test*
+*test*

@@ -24,7 +24,3 @@ variable "environment_variables" {
   default = {}
 }
 
-variable "sqs_queue_arn" {
-  type    = string
-  default = null
-}

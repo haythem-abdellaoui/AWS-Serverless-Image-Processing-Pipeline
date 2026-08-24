@@ -58,7 +58,6 @@ module "processor_lambda" {
   role_arn      = module.iam.processor_lambda_role_arn
   handler       = "main.handler"
 
-  sqs_queue_arn = module.sqs.queue_arn
 
   environment_variables = {
     UPLOAD_BUCKET    = module.s3.upload_bucket_name
@@ -106,6 +105,17 @@ resource "aws_sqs_queue_policy" "allow_s3" {
       }
     ]
   })
+}
+
+resource "aws_lambda_event_source_mapping" "processor_sqs" {
+  event_source_arn = module.sqs.queue_arn
+  function_name    = module.processor_lambda.function_arn
+  batch_size       = 1
+
+  depends_on = [
+    module.processor_lambda,
+    module.sqs
+  ]
 }
 
 
