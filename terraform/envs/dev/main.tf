@@ -122,7 +122,7 @@ resource "aws_lambda_event_source_mapping" "processor_sqs" {
 module "apigateway" {
   source = "../../modules/apigateway"
 
-  api_name            = "serverless-image-pipeline-api"
+  api_name             = "serverless-image-pipeline-api"
   lambda_function_name = module.upload_lambda.function_name
   lambda_invoke_arn    = module.upload_lambda.invoke_arn
 }
