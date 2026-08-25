@@ -6,8 +6,6 @@ A serverless, event-driven image processing pipeline built on AWS, provisioned w
 
 ![Serverless Image Processing Pipeline Architecture](docs/architecture.png)
 
-> Diagram source: `docs/architecture.png` — add the image to this path in the repo so it renders here.
-
 ### Request flow
 
 1. **Client → API Gateway** — the client sends an image upload request to a REST API exposed by API Gateway.
@@ -108,6 +106,3 @@ GitHub Actions (`.github/workflows/`) runs on every push/PR and covers:
 - **Python unit testing** — runs the test suite in `tests/`
 - **Lambda packaging** — automatically builds deployable Lambda artifacts
 
-## License
-
-Add your license of choice here (e.g. MIT).
