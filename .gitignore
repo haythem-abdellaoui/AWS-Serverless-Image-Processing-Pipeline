@@ -3,5 +3,9 @@ terraform/envs/dev/.terraform.lock.hcl
 terraform/envs/dev/*.tfstate
 terraform/envs/dev/*.tfstate.*
 terraform/envs/dev/*.tfvars
-test*
-*test*
+test2.txt  
+test3.txt  
+test.jpg
+test.txt
+processed-test.jpg
+
